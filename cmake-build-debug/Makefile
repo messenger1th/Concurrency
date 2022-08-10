@@ -128,29 +128,29 @@ Concurrency/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Concurrency.dir\build.make CMakeFiles/Concurrency.dir/build
 .PHONY : Concurrency/fast
 
-Queue/ThreadSafeQueue.obj: Queue/ThreadSafeQueue.cpp.obj
-.PHONY : Queue/ThreadSafeQueue.obj
+ThreadSafeQueue/ThreadSafeQueue.obj: ThreadSafeQueue/ThreadSafeQueue.cpp.obj
+.PHONY : ThreadSafeQueue/ThreadSafeQueue.obj
 
 # target to build an object file
-Queue/ThreadSafeQueue.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Concurrency.dir\build.make CMakeFiles/Concurrency.dir/Queue/ThreadSafeQueue.cpp.obj
-.PHONY : Queue/ThreadSafeQueue.cpp.obj
+ThreadSafeQueue/ThreadSafeQueue.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Concurrency.dir\build.make CMakeFiles/Concurrency.dir/ThreadSafeQueue/ThreadSafeQueue.cpp.obj
+.PHONY : ThreadSafeQueue/ThreadSafeQueue.cpp.obj
 
-Queue/ThreadSafeQueue.i: Queue/ThreadSafeQueue.cpp.i
-.PHONY : Queue/ThreadSafeQueue.i
+ThreadSafeQueue/ThreadSafeQueue.i: ThreadSafeQueue/ThreadSafeQueue.cpp.i
+.PHONY : ThreadSafeQueue/ThreadSafeQueue.i
 
 # target to preprocess a source file
-Queue/ThreadSafeQueue.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Concurrency.dir\build.make CMakeFiles/Concurrency.dir/Queue/ThreadSafeQueue.cpp.i
-.PHONY : Queue/ThreadSafeQueue.cpp.i
+ThreadSafeQueue/ThreadSafeQueue.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Concurrency.dir\build.make CMakeFiles/Concurrency.dir/ThreadSafeQueue/ThreadSafeQueue.cpp.i
+.PHONY : ThreadSafeQueue/ThreadSafeQueue.cpp.i
 
-Queue/ThreadSafeQueue.s: Queue/ThreadSafeQueue.cpp.s
-.PHONY : Queue/ThreadSafeQueue.s
+ThreadSafeQueue/ThreadSafeQueue.s: ThreadSafeQueue/ThreadSafeQueue.cpp.s
+.PHONY : ThreadSafeQueue/ThreadSafeQueue.s
 
 # target to generate assembly for a file
-Queue/ThreadSafeQueue.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Concurrency.dir\build.make CMakeFiles/Concurrency.dir/Queue/ThreadSafeQueue.cpp.s
-.PHONY : Queue/ThreadSafeQueue.cpp.s
+ThreadSafeQueue/ThreadSafeQueue.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Concurrency.dir\build.make CMakeFiles/Concurrency.dir/ThreadSafeQueue/ThreadSafeQueue.cpp.s
+.PHONY : ThreadSafeQueue/ThreadSafeQueue.cpp.s
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
@@ -185,9 +185,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Concurrency
-	@echo ... Queue/ThreadSafeQueue.obj
-	@echo ... Queue/ThreadSafeQueue.i
-	@echo ... Queue/ThreadSafeQueue.s
+	@echo ... ThreadSafeQueue/ThreadSafeQueue.obj
+	@echo ... ThreadSafeQueue/ThreadSafeQueue.i
+	@echo ... ThreadSafeQueue/ThreadSafeQueue.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

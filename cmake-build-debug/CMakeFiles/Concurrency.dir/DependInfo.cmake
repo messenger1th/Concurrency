@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/WorkDirectory/Concurrency/Queue/ThreadSafeQueue.cpp" "D:/WorkDirectory/Concurrency/cmake-build-debug/CMakeFiles/Concurrency.dir/Queue/ThreadSafeQueue.cpp.obj"
+  "D:/WorkDirectory/Concurrency/ThreadSafeQueue/ThreadSafeQueue.cpp" "D:/WorkDirectory/Concurrency/cmake-build-debug/CMakeFiles/Concurrency.dir/ThreadSafeQueue/ThreadSafeQueue.cpp.obj"
   "D:/WorkDirectory/Concurrency/main.cpp" "D:/WorkDirectory/Concurrency/cmake-build-debug/CMakeFiles/Concurrency.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

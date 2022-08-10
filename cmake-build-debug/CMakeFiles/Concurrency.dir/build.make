@@ -78,29 +78,29 @@ CMakeFiles/Concurrency.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Concurrency.dir/main.cpp.s"
 	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\WorkDirectory\Concurrency\main.cpp -o CMakeFiles\Concurrency.dir\main.cpp.s
 
-CMakeFiles/Concurrency.dir/Queue/ThreadSafeQueue.cpp.obj: CMakeFiles/Concurrency.dir/flags.make
-CMakeFiles/Concurrency.dir/Queue/ThreadSafeQueue.cpp.obj: ../Queue/ThreadSafeQueue.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\WorkDirectory\Concurrency\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Concurrency.dir/Queue/ThreadSafeQueue.cpp.obj"
-	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Concurrency.dir\Queue\ThreadSafeQueue.cpp.obj -c D:\WorkDirectory\Concurrency\Queue\ThreadSafeQueue.cpp
+CMakeFiles/Concurrency.dir/ThreadSafeQueue/ThreadSafeQueue.cpp.obj: CMakeFiles/Concurrency.dir/flags.make
+CMakeFiles/Concurrency.dir/ThreadSafeQueue/ThreadSafeQueue.cpp.obj: ../ThreadSafeQueue/ThreadSafeQueue.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\WorkDirectory\Concurrency\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Concurrency.dir/ThreadSafeQueue/ThreadSafeQueue.cpp.obj"
+	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Concurrency.dir\ThreadSafeQueue\ThreadSafeQueue.cpp.obj -c D:\WorkDirectory\Concurrency\ThreadSafeQueue\ThreadSafeQueue.cpp
 
-CMakeFiles/Concurrency.dir/Queue/ThreadSafeQueue.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Concurrency.dir/Queue/ThreadSafeQueue.cpp.i"
-	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\WorkDirectory\Concurrency\Queue\ThreadSafeQueue.cpp > CMakeFiles\Concurrency.dir\Queue\ThreadSafeQueue.cpp.i
+CMakeFiles/Concurrency.dir/ThreadSafeQueue/ThreadSafeQueue.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Concurrency.dir/ThreadSafeQueue/ThreadSafeQueue.cpp.i"
+	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\WorkDirectory\Concurrency\ThreadSafeQueue\ThreadSafeQueue.cpp > CMakeFiles\Concurrency.dir\ThreadSafeQueue\ThreadSafeQueue.cpp.i
 
-CMakeFiles/Concurrency.dir/Queue/ThreadSafeQueue.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Concurrency.dir/Queue/ThreadSafeQueue.cpp.s"
-	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\WorkDirectory\Concurrency\Queue\ThreadSafeQueue.cpp -o CMakeFiles\Concurrency.dir\Queue\ThreadSafeQueue.cpp.s
+CMakeFiles/Concurrency.dir/ThreadSafeQueue/ThreadSafeQueue.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Concurrency.dir/ThreadSafeQueue/ThreadSafeQueue.cpp.s"
+	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\WorkDirectory\Concurrency\ThreadSafeQueue\ThreadSafeQueue.cpp -o CMakeFiles\Concurrency.dir\ThreadSafeQueue\ThreadSafeQueue.cpp.s
 
 # Object files for target Concurrency
 Concurrency_OBJECTS = \
 "CMakeFiles/Concurrency.dir/main.cpp.obj" \
-"CMakeFiles/Concurrency.dir/Queue/ThreadSafeQueue.cpp.obj"
+"CMakeFiles/Concurrency.dir/ThreadSafeQueue/ThreadSafeQueue.cpp.obj"
 
 # External object files for target Concurrency
 Concurrency_EXTERNAL_OBJECTS =
 
 Concurrency.exe: CMakeFiles/Concurrency.dir/main.cpp.obj
-Concurrency.exe: CMakeFiles/Concurrency.dir/Queue/ThreadSafeQueue.cpp.obj
+Concurrency.exe: CMakeFiles/Concurrency.dir/ThreadSafeQueue/ThreadSafeQueue.cpp.obj
 Concurrency.exe: CMakeFiles/Concurrency.dir/build.make
 Concurrency.exe: CMakeFiles/Concurrency.dir/linklibs.rsp
 Concurrency.exe: CMakeFiles/Concurrency.dir/objects1.rsp

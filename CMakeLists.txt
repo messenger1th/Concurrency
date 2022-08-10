@@ -3,4 +3,4 @@ project(Concurrency)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Concurrency main.cpp Queue/ThreadSafeQueue.cpp Queue/ThreadSafeQueue.h)
+add_executable(Concurrency main.cpp ThreadSafeQueue/ThreadSafeQueue.cpp ThreadSafeQueue/ThreadSafeQueue.h)

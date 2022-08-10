@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Concurrency.dir/Queue/ThreadSafeQueue.cpp.obj"
+  "CMakeFiles/Concurrency.dir/ThreadSafeQueue/ThreadSafeQueue.cpp.obj"
   "CMakeFiles/Concurrency.dir/main.cpp.obj"
   "Concurrency.exe"
   "Concurrency.exe.manifest"

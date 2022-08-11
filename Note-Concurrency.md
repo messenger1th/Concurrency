@@ -16,7 +16,35 @@ Please check relevant API.
 
 
 
+### Lower level of Abstraction
+
+* Use `std::thread` to launch a thread right now.
+* Pass `std::promise` to thread paras to set the result in that thread.
+
+
+
+### Upper level of Abstraction
+
+* Use `std::asynch` to define a thread, pass `launch:: ` para to decide the launch choice.
+* Use `std::future<>` to get the  return value of `std::asynch`.
+
+
+
+### Higher Level of Abstraction
+
+* Use `packet_task<>`.
+
+
+
 ## Sharing Data between threads
+
+To protect data changed by multi threads, lock the data relevant `mutex`.
+
+for data access order, there are  **Race Conditions** should be token into consideration. 
+
+for one thread are waiting for other thread, there may be **Dead Lock** problems.
+
+
 
 ### Race Condition
 
@@ -36,7 +64,7 @@ Here are some guideline to avoid Dead Lock.
 
 ### Appropriate granularity
 
-* Use `unique_lock` rather than `lock_gard` to provide more flexibility.
+* Use `unique_lock` rather than `lock_guard` to provide more flexibility by `lock()`, `unlock()`, `try_lock()` member function which `lock_guard` not provide.
 
 
 
@@ -73,11 +101,11 @@ Singleton *Singleton::CreateInstance()  {
 }
 ```
 
-By the way, `[&] { instance = new Singleton; }` Lambda Function is C++11feature, too.
+By the way, `[&] { instance = new Singleton; }` Lambda Function is C++11 feature, too.
 
 
 
-To be honest, use `static` is a solution, too.
+Honestly, use `static` is a solution, too.
 
 ```cpp
 Singleton *Singleton::CreateInstance()  {
@@ -87,4 +115,65 @@ Singleton *Singleton::CreateInstance()  {
 ```
 
 
+
+## Synchronizing concurrent operations
+
+### Waiting for an event or other condition
+
+1. Version1.0 : CPU check, waste CPU resources.
+
+    ```cpp
+    void doSomeWork() {
+        std::unique_lock<std::mutex> lock(m);
+        while (!flag) {
+            ;
+        }
+        //do some work.
+    }
+    ```
+
+2. Version2.0: fine-tune, check every 100ms by CPU.
+
+    ```cpp
+    void doSomeWork() {
+        std::unique_lock<std::mutex> lock(m);
+        while (!flag) {
+            lock.unlock();
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
+            lock.lock();
+        }
+        //do some work.
+    }
+    ```
+
+3. Version final: Use `condition_variable` to notify.
+
+    ```cpp
+    code omit...
+    ```
+
+    
+
+### Waiting for one-off events with futures
+
+* For lower level abstraction, `std::thread`, there are no return value. pass `std::promise`to set operation result.
+* For upper level abstraction,  use `std::future<>()` and `std::async()` to return value based on `std::thread` and `std::promise`.
+
+
+
+### Waiting with a time limit
+
+for `std::condition_variable` and `std::future<>`
+
+* `wait_for`
+* `wait_until`
+
+There are also some functions  that accept timeouts...
+
+
+
+Worth noticing, 
+
+* `chrono::system_clock` is about system clock. Program will be influent by system clock if you change it.
+* while `chrono::steady_clock` is not.
 

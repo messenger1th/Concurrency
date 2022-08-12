@@ -149,7 +149,7 @@ Singleton *Singleton::CreateInstance()  {
 3. Version final: Use `condition_variable` to notify.
 
     ```cpp
-    code omit...
+    code omit...(traditional productor-consumer model)
     ```
 
     
@@ -176,4 +176,36 @@ Worth noticing,
 
 * `chrono::system_clock` is about system clock. Program will be influent by system clock if you change it.
 * while `chrono::steady_clock` is not.
+
+
+
+## The *C++* memory model and operations on atomic types
+
+This chapter is about lower-level detail of C++ concurrency.
+
+* The memory model order,default `memory_order_seq_cst`.
+
+  ```cpp
+  typedef enum memory_order
+  {
+      memory_order_relaxed,
+      memory_order_consume,
+      memory_order_acquire,
+      memory_order_release,
+      memory_order_acq_rel,
+      memory_order_seq_cst
+  } memory_order;
+  ```
+
+* `atomic<build-in>`, `atomic<T*>` usage and relevant operation.
+* **How `memory_order` affect the execution order, which is complicated.**
+
+
+
+**Some relevant feature.**
+
+* `std::kill_dependency()` let complier to know it doesn't need reread, which usually use on invariant.
+* `std::atomic_thread_fence()` 
+
+
 
